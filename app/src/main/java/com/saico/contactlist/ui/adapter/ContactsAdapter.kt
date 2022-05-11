@@ -1,4 +1,4 @@
-package com.saico.contactlist.adapter
+package com.saico.contactlist.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.saico.contactlist.databinding.ItemContactBinding
-import com.saico.contactlist.model.Person
+import com.saico.contactlist.data.model.Person
 
 class ContactsAdapter(private val dataSet: List<Person>): RecyclerView.Adapter<ContactsAdapter.ViewHolder>() {
 

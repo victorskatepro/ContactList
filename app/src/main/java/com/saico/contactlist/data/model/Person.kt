@@ -1,4 +1,4 @@
-package com.saico.contactlist.model
+package com.saico.contactlist.data.model
 
 data class Person(
     val id:Int,
