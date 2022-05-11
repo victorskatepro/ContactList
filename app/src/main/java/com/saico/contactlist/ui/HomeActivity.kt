@@ -5,16 +5,15 @@ import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.saico.contactlist.data.PersonRepository
 import com.saico.contactlist.data.model.Person
+import com.saico.contactlist.databinding.ActivityHomeBinding
 import com.saico.contactlist.ui.adapter.ContactsAdapter
-import com.saico.contactlist.databinding.ActivityMainBinding
 import com.saico.contactlist.presenter.HomePresenter
 import com.saico.contactlist.ui.view.HomeContract
 
 class HomeActivity : AppCompatActivity(), HomeContract.View {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityHomeBinding
 
     private lateinit var contactListRecyclerView: RecyclerView
 
@@ -22,7 +21,7 @@ class HomeActivity : AppCompatActivity(), HomeContract.View {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
         homePresenter = HomePresenter(this)
